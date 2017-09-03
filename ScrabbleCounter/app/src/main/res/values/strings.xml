@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ScrabbleCounter</string>
+    <string name="first_player">First Player</string>
+    <string name="second_player">Second Player</string>
+    <string name="reset">Reset</string>
+    <string name="add_p1">Add P1</string>
+    <string name="add_p2">Add P2</string>
+    <string name="one_minute" translatable="false">1 min</string>
+    <string name="three_minutes" translatable="false">3 min</string>
+    <string name="five_minutes" translatable="false">5 min</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="too_low_value">You can&#8217;t have less than 0.</string>
+</resources>

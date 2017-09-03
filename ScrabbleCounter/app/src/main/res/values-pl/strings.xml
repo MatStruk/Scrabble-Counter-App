@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ScrabbleCounter</string>
+    <string name="add_p1">Dodaj G1</string>
+    <string name="add_p2">Dodaj G2</string>
+    <string name="first_player">Pierwszy gracz</string>
+    <string name="pause">Pauza</string>
+    <string name="reset">Reset</string>
+    <string name="resume">Wznów</string>
+    <string name="second_player">Drugi gracz</string>
+    <string name="too_low_value">Nie możesz mieć mniej punktów niż 0.</string>
+</resources>

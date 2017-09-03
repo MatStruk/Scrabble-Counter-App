@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical"
+        tools:context="com.example.android.scrabblecounter.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:gravity="center"
+                android:hint="@string/first_player"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:gravity="center"
+                android:hint="@string/second_player"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/user1score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/textColor"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/user2score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/textColor"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="resetPlayersScore"
+                android:text="@string/reset" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp">
+
+
+            <Button
+                android:id="@+id/minusOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="addMinusOne"
+                android:text="-1" />
+
+            <Button
+                android:id="@+id/plusOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:onClick="addPlusOne"
+                android:text="+1" />
+
+            <Button
+                android:id="@+id/minusFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/minusOne"
+                android:onClick="addMinusFive"
+                android:text="-5" />
+
+            <Button
+                android:id="@+id/plusFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/plusOne"
+                android:onClick="addPlusFive"
+                android:text="+5" />
+
+
+            <Button
+                android:id="@+id/minusTen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/minusFive"
+                android:onClick="addMinusTen"
+                android:text="-10" />
+
+            <Button
+                android:id="@+id/plusTen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/plusFive"
+                android:onClick="addPlusTen"
+                android:text="+10" />
+
+            <TextView
+                android:id="@+id/texted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0"
+                android:textColor="@color/textColor"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/plusTen"
+                android:layout_marginBottom="10dp"
+                android:onClick="addValueToUserOne"
+                android:text="@string/add_p1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/plusTen"
+                android:onClick="addValueToUserTwo"
+                android:text="@string/add_p2" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/plusTen"
+                android:layout_centerHorizontal="true"
+                android:onClick="resetValueBeforeAdd"
+                android:text="@string/reset" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@android:color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/textColor"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timer"
+                android:onClick="setTimerOneMinute"
+                android:text="@string/one_minute" />
+
+            <Button
+                android:id="@+id/timeButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timer"
+                android:layout_centerHorizontal="true"
+                android:onClick="setTimerThreeMinutes"
+                android:text="@string/three_minutes" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/timer"
+                android:onClick="setTimerFiveMinutes"
+                android:text="@string/five_minutes" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeButtons"
+                android:layout_centerHorizontal="true"
+                android:onClick="pauseTimer"
+                android:text="@string/pause" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/timeButtons"
+                android:onClick="resumeTimer"
+                android:text="@string/resume" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
